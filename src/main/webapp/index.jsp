@@ -1,9 +1,10 @@
 <html>
 <body>
-<form action="add">
-	<input type="text" name="text1">
-	<input type="text" name="text2">
-	<input type="submit">
+Login
+<form action="login">
+	<input type="text" name="login">
+	<input type="password" name="pass">
+	<input type="submit" value=" Login ">
 </form>
 </body>
 </html>
