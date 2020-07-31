@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 
 public class LoginServlet {
-	@RequestMapping("/login")
+	@RequestMapping("/login*")
 	public ModelAndView login(HttpServletRequest request,HttpServletResponse response){
 		ModelAndView modelAndView = new ModelAndView();
 		
