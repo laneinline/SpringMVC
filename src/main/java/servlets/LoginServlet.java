@@ -7,8 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import dao.UserDaoController;
-
 @Controller
 
 public class LoginServlet {
@@ -18,23 +16,13 @@ public class LoginServlet {
 		
 		modelAndView.setViewName("loginError.jsp");
 		
-
-		UserDaoController userDaoController = new UserDaoController();
-		
-		userDaoController.isLoginExist(request.getParameter("login"));
-		
-		if(userDaoController.isLoginExist(request.getParameter("login"))) {
+		if(request.getParameter("login").equals("abc") && request.getParameter("pass").equals("123")) {
 			modelAndView.setViewName("loginSuccess.jsp");
-		}else {modelAndView.setViewName("loginError.jsp");}
+		}else {modelAndView.setViewName("loginError.jsp");
+		}
 
 		
 		return  modelAndView;
 	}
 	
 }
-
-
-//		if(request.getParameter("login").equals("abc") && request.getParameter("pass").equals("123")) {
-//			modelAndView.setViewName("loginSuccess.jsp");
-//		}else {modelAndView.setViewName("loginError.jsp");
-//		}
